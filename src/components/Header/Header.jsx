@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./Header.module.css";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
@@ -13,12 +14,12 @@ const Header = () => {
         <div className={classes.header__container}>
           <div className={classes.logo__container}>
             {/* logo */}
-            <a href="/">
+            <Link to="/">
               <img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="amazon logo"
               />
-            </a>
+            </Link>
             {/* delivery */}
             <div className={classes.delivery}>
               <span>
@@ -42,7 +43,7 @@ const Header = () => {
 
           {/* right side link */}
           <div className={classes.order__container}>
-            <a href="" className={classes.language}>
+            <Link to="" className={classes.language}>
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg/383px-Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg.png"
                 alt="flag"
@@ -50,27 +51,27 @@ const Header = () => {
               <section>
                 <option value="">EN</option>
               </section>
-            </a>
+            </Link>
 
             {/* three components */}
-            <a href="">
+            <Link to={"/auth"}>
               <div>
                 <p>Sign In</p>
                 <span>Account & Lists</span>
               </div>
-            </a>
+            </Link>
 
             {/* orders */}
-            <a href="">
+            <Link to={"/orders"}>
               <p>returns</p>
               <span>& Orders</span>
-            </a>
+            </Link>
 
             {/* carts */}
-            <a href="" className={classes.cart}>
+            <Link to={"/cart"} className={classes.cart}>
               <BiCart size={35} />
               <span>0</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
