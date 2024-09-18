@@ -28,8 +28,13 @@ const Product = () => {
         <Loader />
       ) : (
         <section className={classes.product__container}>
-          {products?.map((singleProduct) => {
-            <ProductCard product={singleProduct} key={singleProduct.id} />;
+          {products?.map((singleProduct, index) => {
+            return (
+              <ProductCard
+                product={singleProduct}
+                key={index}
+              />
+            );
           })}
         </section>
       )}

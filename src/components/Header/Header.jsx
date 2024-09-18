@@ -4,8 +4,7 @@ import classes from "./Header.module.css";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import { IoLocationOutline } from "react-icons/io5";
-import LowerHeader from "./LowerHeader"
-
+import LowerHeader from "./LowerHeader";
 
 const Header = () => {
   return (
@@ -48,9 +47,10 @@ const Header = () => {
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg/383px-Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg.png"
                 alt="flag"
               />
-              <section>
+              <select name="" id="">
                 <option value="">EN</option>
-              </section>
+                <option value="">ES</option>
+              </select>
             </Link>
 
             {/* three components */}
